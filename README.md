@@ -9,6 +9,8 @@ Node module to communicate with a AVM FritzBox and FRITZ!DECT 200 (smart home ha
 - Get the switch (FRITZ!DECT 200) Power (getSwitchPower)
 - Get the switch (FRITZ!DECT 200) Energy (getSwitchEnergy)
 - Get the switch (FRITZ!DECT 200) List (getSwitchList)
+- Get the switch (FRITZ!DECT 200) Name (getSwitchName)
+- Get the switch (FRITZ!DECT 200) Temperature (getTemperature) AVM removed this command between FritzOS 6.0? and 6.10?
 - Get the DeviceListInfos (FRITZ!DECT 200) as XML (getDeviceListInfos) >FritzOS 6.10
 - Get the phone list (getPhoneList)
 - Set the guest wlan (setGuestWLan)
@@ -118,6 +120,25 @@ fritz.setSwitchOff(sid, aid, function(sid){
 });
 ```
 
+Get the switch (user) name (DECT200):
+```js
+var fritz = require('smartfritz');
+
+fritz.setSwitchName(sid, aid, function(name){
+    console.log(name);
+});
+```
+
+Get the switch temperature (DECT200 not tested with Comet DECT but should also work):
+```js
+var fritz = require('smartfritz');
+
+fritz.setTemperature(sid, aid, function(temp){
+    console.log(temp); // in tenth degrees!
+});
+```
+
+
 Get the phone list:
 ```js
 var fritz = require('smartfritz');
@@ -157,6 +178,7 @@ http://avm.de/fileadmin/user_upload/Global/Service/Schnittstellen/AHA-HTTP-Inter
 
 ## Thanks to // Code base from:
 
+* nischelwitzer for the main implementation of this library
 * steffen.timm for the basic communication function
 * thk4711 for the FRITZ!DECT 200 codes 
 * AVM for providing the good AHA-HTTP-Interface document 

@@ -1,6 +1,6 @@
 {
   "name": "smartfritz",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "SmartHome for Fritz!Box and Dect!200 Node to communicate with AVM FritzBox over the aha-http-interface",
   "author": {
     "name": "nischi",
@@ -8,6 +8,10 @@
   },
   "license": "MIT",
   "contributors": [
+    {
+      "name": "Thomas Baust",
+      "email": "tbaust@gmx.net"
+    },
     {
       "name": "Steffen Timm",
       "email": "s.timm@nischi.net"
@@ -20,7 +24,7 @@
   "main": "./lib/smartfritz.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nischelwitzer/smartfritz"
+    "url": "https://github.com/tbaust/smartfritz"
   },
   "dependencies": {
     "http": "*",
@@ -36,7 +40,7 @@
   "readme": "",
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/nischelwitzer/smartfritz/issues"
+    "url": "https://github.com/tbaust/smartfritz/issues"
   },
-  "homepage": "https://github.com/nischelwitzer/smartfritz"
+  "homepage": "https://github.com/tbaust/smartfritz"
 }
